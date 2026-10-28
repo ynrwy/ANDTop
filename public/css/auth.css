@@ -1,0 +1,259 @@
+:root {
+    --duck-yellow: #FFB703;
+    --duck-cream: #ffe485;
+    --duck-brown: #5d4037;
+    --duck-water: #4fc3f7;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background: linear-gradient(180deg, #FFE066 0%, var(--duck-yellow) 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.auth-card {
+    background: var(--duck-cream);
+    width: 100%;
+    max-width: 420px;
+    padding: 40px 30px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+}
+
+.auth-logo {
+    height: 90px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 16px;
+}
+
+/* Judul: cokelat tua, kontras tinggi di atas krem */
+.auth-title {
+    color: var(--duck-brown);
+    font-size: 24px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+}
+
+.auth-text {
+    color: var(--duck-brown);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.auth-hint {
+    color: var(--duck-brown);
+    font-size: 13px;
+    margin-top: 15px;
+    opacity: .85;
+}
+
+.form-group {
+    margin-bottom: 14px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 14px 20px;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    font-size: 15px;
+    color: #333;
+    background: #fff;
+    outline: none;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, .04);
+}
+
+.form-input::placeholder {
+    color: #757575;
+}
+
+.form-input:focus {
+    border-color: var(--duck-water);
+}
+
+/* Tombol (button dan a) */
+.btn-main,
+.btn-back,
+.btn-outline,
+.btn-google {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color .2s, color .2s, transform .1s;
+}
+
+.btn-main:active,
+.btn-back:active,
+.btn-outline:active,
+.btn-google:active {
+    transform: scale(.98);
+}
+
+.btn-main {
+    background: var(--duck-brown);
+    color: #fff;
+}
+
+.btn-main:hover {
+    background: #4a332b;
+}
+
+.btn-main:disabled {
+    background: #bdbdbd;
+    cursor: not-allowed;
+}
+
+.btn-back {
+    background: #fff;
+    color: #000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .05);
+}
+
+.btn-back:hover {
+    background: #f7f7f7;
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--duck-brown);
+    border-color: var(--duck-brown);
+}
+
+.btn-outline:hover {
+    background: var(--duck-brown);
+    color: #fff;
+}
+
+.btn-google {
+    background: #fff;
+    color: #333;
+    text-transform: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .05);
+}
+
+.btn-google:hover {
+    background: #f7f7f7;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 18px 0 8px;
+    color: var(--duck-brown);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(93, 64, 55, .3);
+}
+
+.auth-links {
+    margin-top: 18px;
+}
+
+.auth-link {
+    display: block;
+    font-size: 14px;
+    color: var(--duck-brown);
+    text-decoration: none;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.auth-link:hover {
+    text-decoration: underline;
+}
+
+.auth-link strong {
+    color: #000;
+}
+
+.form-input.is-invalid {
+    border-color: #dc3545;
+}
+
+.invalid-feedback {
+    display: block;
+    text-align: left;
+    font-size: 13px;
+    color: #b71c1c;
+    font-weight: 600;
+    margin-top: 4px;
+}
+.password-wrap {
+    position: relative;
+}
+
+.password-wrap .form-input {
+    padding-right: 80px;
+}
+
+.toggle-pw {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    margin: 0;
+    padding: 8px 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--duck-brown);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 4px 0 14px;
+    font-size: 14px;
+    color: var(--duck-brown);
+    font-weight: 600;
+    text-align: left;
+}
+
+.remember input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--duck-brown);
+}
+
+/* Tombol nyaman di HP */
+.btn-main,
+.btn-back,
+.btn-outline,
+.btn-google {
+    min-height: 48px;
+}

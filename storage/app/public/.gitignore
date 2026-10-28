@@ -1,0 +1,6 @@
+*
+!.gitignore
+!images/
+!images/**
+images/users/*
+!images/users/default.jpg
