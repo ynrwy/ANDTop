@@ -25,6 +25,8 @@ return Application::configure(basePath: dirname(__DIR__))
 
         //Payment Gateway
         $middleware->validateCsrfTokens(except: ['payment/notification']);
+
+        $middleware->trustProxies(at: '*');
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
